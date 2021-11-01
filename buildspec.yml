@@ -1,0 +1,20 @@
+version: 0.0
+env:
+  variables:
+phases:
+  install:
+    runtime-versions:
+      dotnet: 6.0.x
+  build:
+    commands:
+      - echo Build started at `date`
+      - dotnet build /DemoAPI.sln 
+  post_build:
+    commands:
+      - echo Publish started on `date`
+      - dotnet publish -c Release /DemoAPI.sln
+  artifacts:
+    files:
+      - '**/*'
+      base-directory: ./bin/Release/net6.0/publish/
+      discard-paths: no
