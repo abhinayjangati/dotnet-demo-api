@@ -16,6 +16,8 @@ phases:
       - dotnet publish -c release -o ./build_output DemoAPI/DemoAPI.csproj
 artifacts:
   files:
-    - DemoAPI/build_output/**/*
+    #- DemoAPI/build_output/**/*
+    - ./bin/Release/net5.0/publish/**/*
+  #base-directory: ./bin/Release/net5.0/publish/
   name: $Env:TEST_ENV_VARIABLE-$(Get-Date -UFormat "%Y%m%d-%H%M%S")
   discard-paths: no
