@@ -13,7 +13,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c release -o ./build_output DemoAPI/DemoAPI.csproj
+      - dotnet publish -c release DemoAPI/DemoAPI.csproj
 artifacts:
   files:
     #- DemoAPI/build_output/**/*
