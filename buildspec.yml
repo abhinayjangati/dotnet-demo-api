@@ -14,7 +14,7 @@ phases:
     commands:
       - echo Build started on `date`
       - dotnet publish -c release DemoAPI/DemoAPI.csproj
-      - 'dir ./DemoAPI/bin/Release'
+      - 'dir ./DemoAPI/bin'
 artifacts:
   files:
     - DemoAPI/bin/Release/net5.0/publish/**/*
