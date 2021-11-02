@@ -1,4 +1,4 @@
-version: 0.2
+version: 0.3
 # env:
 #   variables:
 #     TEST_ENV_VARIABLE: DEMOAPP
@@ -17,4 +17,4 @@ phases:
       - 'dir ./build-output'
 artifacts:
   files:
-    - './build_output/**/*'
+    - DemoAPI/build_output/**/*
