@@ -3,6 +3,9 @@ env:
   variables:
     TEST_ENV_VARIABLE: DEMOAPP
 phases:
+  install:
+    runtime-versions:
+      dotnet: 6.0.x
   pre_build:
     commands:
       - echo Restore started at `date`
