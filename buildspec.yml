@@ -5,7 +5,7 @@ env:
 phases:
   install:
     runtime-versions:
-      dotnet: 6.0.x
+      dotnet: 5.0
   pre_build:
     commands:
       - echo Restore started at `date`
