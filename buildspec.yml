@@ -17,6 +17,6 @@ phases:
   artifacts:
     files:
       - '**/*'
-      base-directory: ./bin/Release/net6.0/publish/
-      name: $Env:TEST_ENV_VARIABLE-$(Get-Date -UFormat "%Y%m%d-%H%M%S")
-      discard-paths: no
+    base-directory: ./bin/Release/net6.0/publish/
+    name: $Env:TEST_ENV_VARIABLE-$(Get-Date -UFormat "%Y%m%d-%H%M%S")
+    discard-paths: no
