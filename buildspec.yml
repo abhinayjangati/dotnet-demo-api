@@ -1,11 +1,11 @@
 version: 0.2
-env:
-  variables:
-    TEST_ENV_VARIABLE: DEMOAPP
+# env:
+#   variables:
+#     TEST_ENV_VARIABLE: DEMOAPP
 phases:
-  install:
-    runtime-versions:
-      dotnet: 5.0
+  # install:
+  #   runtime-versions:
+  #     dotnet: 5.0
   pre_build:
     commands:
       - echo Restore started at `date`
