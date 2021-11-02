@@ -17,5 +17,5 @@ phases:
       - 'dir ./build-output/Demo'
 artifacts:
   files:
-    - ./build_output/**
+    - DemoAPI/build_output/**
     name: build-artifacts
