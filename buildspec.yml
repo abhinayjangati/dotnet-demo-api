@@ -14,9 +14,9 @@ phases:
     commands:
       - echo Build started on `date`
       - dotnet publish -c release -o ./build-output DemoAPI/DemoAPI.csproj
-      - 'dir ./'
+      - 'dir ./build_output'
 artifacts:
   files:
-    - DemoAPI/build_output/*
+    - DemoAPI/build_output/**/*
   name: $Env:TEST_ENV_VARIABLE-$(Get-Date -UFormat "%Y%m%d-%H%M%S")
   discard-paths: no
