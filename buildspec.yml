@@ -1,6 +1,7 @@
 version: 0.0
 env:
   variables:
+    TEST_ENV_VARIABLE: DEMOAPP
 phases:
   install:
     runtime-versions:
@@ -17,4 +18,5 @@ phases:
     files:
       - '**/*'
       base-directory: ./bin/Release/net6.0/publish/
+      name: $Env:TEST_ENV_VARIABLE-$(Get-Date -UFormat "%Y%m%d-%H%M%S")
       discard-paths: no
