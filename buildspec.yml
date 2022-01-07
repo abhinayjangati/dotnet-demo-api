@@ -17,8 +17,8 @@ phases:
       - 'dir ./DemoAPI/bin/release/net5.0/publish'
   post_build:
     commands:
-      - echo dir
-      #- zip -r build.zip DemoAPI/bin/release/net5.0/publish/**/*
+      - echo `dir`
+      - zip -r build.zip DemoAPI/bin/release/net5.0/publish
 artifacts:
   discard-paths: yes
   files:
