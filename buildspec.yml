@@ -15,7 +15,11 @@ phases:
       - echo Build started on `date`
       - dotnet publish -c release DemoAPI/DemoAPI.csproj
       - 'dir ./DemoAPI/bin/release/net5.0/publish'
+  post_build:
+    commands:
+      - echo Compressing started on `date`
+      - zip -r build.zip DemoAPI/bin/release/net5.0/publish/**/*
 artifacts:
   discard-paths: yes
   files:
-    - DemoAPI/bin/release/net5.0/publish/**/* 
+    - build.zip
